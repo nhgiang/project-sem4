@@ -1,0 +1,59 @@
+<div class="wrap-header">
+  <div class="container">
+    <div class="main-logo" routerLink="/">
+      <img src="./assets/images/cat.jpg" alt="azsolutions" />
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" (click)="isshow = true">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" [class.show]="isshow === true">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" (click)="isshow = false">Trang chủ</a>
+          </li>
+          <li class="nav-item desktop">
+            <a class="nav-link drop" [class.down]="megashow1 === true" (click)="isshow = false"
+              (mouseout)="megashow1 = false" (mouseover)="megashow1 = true">Dịch vụ</a>
+            <div class="mega-menu2" (mouseleave)="megashow1 = false" (mouseenter)="megashow1 = true">
+              <p *ngFor="let item of [1, 2, 3, 4]">
+                <a (click)="isshow = false" class="menulv2">item {{ item }}</a>
+              </p>
+            </div>
+          </li>
+          <li class="nav-item mobile">
+            <a class="nav-link drop" (click)="isCollapsed2 = !isCollapsed2; isCollapsed = true"
+              [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseBasic1">Dịch vụ
+            </a>
+            <div id="collapseBasic1" [collapse]="isCollapsed2" [isAnimated]="true">
+              <div class="well well-lg card card-block card-header">
+                <ul>
+                  <li *ngFor="let item of [1, 2, 3, 4]">
+                    <a (click)="isshow = false" class="menulv2">{{ item }}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="isshow = false">Bảng giá</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="isshow = false">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="isshow = false">Về chúng
+              tôi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="isshow = false">Liên hệ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="bg-menu" [class.show]="isshow === true" (click)="isshow = false"></div>

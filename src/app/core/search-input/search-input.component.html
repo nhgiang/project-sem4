@@ -1,0 +1,6 @@
+<div class="form-control-search" [class.has-query]="query?.length">
+  <i class="far fa-search"></i>
+  <input type="search" class="form-control form-control-filter" spellcheck="false" (keyup)="onKeyUp($event)" [placeholder]="placeholder" [(ngModel)]="query">
+  <i [hidden]="query === '' || !query" class="icon-clear fal fa-times" (click)="clear()">
+  </i>
+</div>

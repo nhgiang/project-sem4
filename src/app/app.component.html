@@ -1,0 +1,26 @@
+<div class="test-simple-bar">
+  <app-header></app-header>
+  <div class="rating-star">
+    <app-rating-star [rating]="3"></app-rating-star>
+  </div>
+  <div class="show-pagination pt-5">
+    <pagination [total]="10" [quantity]="3" [page]="1"></pagination>
+  </div>
+  <div class="no-result mt-2">
+    <no-results [message]="'Không có gì hiển thị cả'" [icon]="'fas fa-book-open'"></no-results>
+  </div>
+  <div class="confirmation">
+    <button class="confirmation btn btn-primary" [confirmation]="'Xác nhận những gì bạn vừa làm'">
+      button confirm
+    </button>
+  </div>
+  <div class="notifyModal">
+    <button class="btn btn-primary notification" (click)="showModalNotify()">button notification</button>
+  </div>
+  <div class="alert" (click)="showAlert()">
+    <button class="btn btn-primary">Show Alert success</button>
+  </div>
+  <div class="alert" (click)="showAlertError()">
+    <button class="btn btn-primary">Show Alert error</button>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="">
+<fieldset class="rating">
+  <input type="radio" [checked]="rating===5"/>
+  <label (click)='onclick(5)' (mouseover)="over(5)"  [className]="arrayhover.includes(5)?'rate':'' " (mouseleave)="leave()">5 stars</label>
+
+  <input type="radio" [checked]="rating===4"/>
+  <label (click)='onclick(4)' (mouseover)="over(4)" [className]="arrayhover.includes(4)?'rate':''" (mouseleave)="leave()">4 stars</label>
+
+  <input type="radio" [checked]="rating===3"/>
+  <label (click)='onclick(3)' (mouseover)="over(3)" [className]="arrayhover.includes(3)?'rate':''" (mouseleave)="leave()">3 stars</label>
+
+  <input type="radio" [checked]="rating===2"/>
+  <label (click)='onclick(2)' (mouseover)="over(2)" [className]="arrayhover.includes(2)?'rate':''" (mouseleave)="leave()">2 stars</label>
+
+  <input type="radio" [checked]="rating===1"/>
+  <label (click)='onclick(1)' (mouseover)="over(1)" [className]="arrayhover.includes(1)?'rate':''" (mouseleave)="leave()">1 star</label>
+</fieldset>
+<!--<p *ngIf="rating">bạn đã vote {{rating}} sao</p>-->
+</div>

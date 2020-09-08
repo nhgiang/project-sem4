@@ -1,0 +1,11 @@
+<div class="no-results-container">
+  <div *ngIf="icon">
+    <i [ngClass]="icon" class="text-muted"></i>
+  </div>
+    <img *ngIf="image" [src]="image" [alt]="message" [style.width]="imageWidth ? (imageWidth + 'px') : 'auto'">
+  <div class="message text-muted mt-3" *ngIf="message?.length">{{ message  }}</div>
+  <div class="description" *ngIf="description?.length">{{ description  }}</div>
+  <div class="link" >
+    <ng-content></ng-content>
+  </div>
+</div>

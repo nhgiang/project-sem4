@@ -1,0 +1,44 @@
+.body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rating {
+  float: left;
+}
+
+.rating > input {
+  position: absolute;
+  display: none;
+}
+
+.rating > label {
+  float: right;
+  width: 1em;
+  padding: 0.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 200%;
+  line-height: 1.2;
+  color: #ddd;
+}
+
+.rating > label:before {
+  content: '★ ';
+}
+.rate ~ label,.rate{
+  color: yellow !important;
+}
+.rating > input:checked ~ label {
+  color: yellow ;
+}
+.rating:hover input:checked~label{
+  color: #dddddd;
+}
+/*.rating > input:checked ~ label:hover,*/
+/*.rating > label:hover ~ input:checked ~ label {*/
+/*  color: yellow;*/
+/*}*/

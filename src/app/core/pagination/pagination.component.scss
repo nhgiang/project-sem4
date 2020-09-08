@@ -1,0 +1,22 @@
+.page-item {
+  a {
+      cursor: pointer;
+  }
+}
+
+.pagination {
+.page-item {
+  margin: 0 .5rem;
+  a{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  &.disabled{
+    a{
+      background-color: transparent;
+    }
+  }
+}
+}
